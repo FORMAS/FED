@@ -15,9 +15,10 @@ Currently, in this Colab, 5 different trained models are available to execution:
 The system outputs the event detections in the following Json format:
 ```json
 [{
-  "text":   "disse",
-  "start":  58,
-  "end":    63
+  "text":       "disse",
+  "start":      58,
+  "end":        63,
+  "event_type": "Statement"
   },
   ...
 ]

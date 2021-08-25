@@ -7,7 +7,7 @@ FED - Frame Event Detection
 
 # DESCRIPTION
 
-FED is a closed domain event detector system for sentences in the Portuguese language. It detect events from sentences, i.e., event trigger identification and classification. The event types are based on the typology of the FrameNet project (BAKER, 2017). The models were trained on an enriched TimeBankPT (COSTA; BRANCO,2012) corpus.
+FED is a closed domain event detector system for sentences in the Portuguese language. It detect events from sentences, i.e., event trigger identification and classification. The event types are based on the typology of the FrameNet project (BAKER; FILLMORE; LOWE, 1998). The models were trained on an enriched TimeBankPT (COSTA; BRANCO,2012) corpus.
 
 
 Currently, in this Colab, 5 different trained models are available to execution: 0, 5, 25, 50, and 100 which respectively correspond to: 214, 137, 31, 13, and 5 event types.

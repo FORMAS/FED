@@ -14,15 +14,20 @@ Currently, in this Colab, 5 different trained models are available to execution:
 
 The system outputs the event detections in the following Json format:
 ```json
-[{
-  "text":       "disse",
-  "start":      58,
-  "end":        63,
-  "event_type": "Statement"
-  },
-  ...
+[
+    {
+        "text": "aumentou",
+        "start": 12,
+        "end": 20,
+        "event_type": "Cause_change_of_position_on_a_scale"
+    },
+    {
+        "text": "disse",
+        "start": 58,
+        "end": 63,
+        "event_type": "Statement"
+    }
 ]
-  
 ```
 
 # Local Execution
@@ -83,7 +88,4 @@ $ python3 src/fed.py --sentence 'A Petrobras aumentou o preço da gasolina para 
 
 Peer-reviewed accepted paper:
 
-10th Brazilian Conference on Intelligent Systems (BRACIS)
-
-* Sacramento A. ; Souza M. . Joint Event Extraction with Contextualized Word Embeddings for the Portuguese 
-Language.
+* Sacramento, A., Souza, M.: Joint Event Extraction with Contextualized Word Embeddings for the Portuguese Language. In: 10th Brazilian Conference on Intelligent System, BRACIS, São Paulo, Brazil, from November 29 to December 3, 2021.

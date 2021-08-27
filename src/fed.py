@@ -151,7 +151,7 @@ def load_events_info():
 
 
 
-def detect_events_c1ff(text, feature_option):
+def detect_events_c1ff(text, feature_option, is_pprint=True):
     MAX_SEQUENCE_LENGTH = 150
 
     text_tokens = get_sentence_original_tokens(text, tokenize_and_compose(text))
@@ -172,11 +172,13 @@ def detect_events_c1ff(text, feature_option):
                        'start': loc_start,
                        'end':   loc_end,
                        'event_type': event_type['name'] })
+    if is_pprint:
+        return json.dumps(output, indent=4)
     return output
 
 
 
-def detect_events_ff(text, feature_option):
+def detect_events_ff(text, feature_option, is_pprint=True):
     text_tokens = get_sentence_original_tokens(text, tokenize_and_compose(text))
     features = extract(text, {feature_option:True})[feature_option]
     embedding = np.array(features).reshape((len(text_tokens), 768))
@@ -194,6 +196,8 @@ def detect_events_ff(text, feature_option):
                        'start': loc_start,
                        'end':   loc_end,
                        'event_type': event_type['name'] })
+    if is_pprint:
+            return json.dumps(output, indent=4)
     return output
 
 
